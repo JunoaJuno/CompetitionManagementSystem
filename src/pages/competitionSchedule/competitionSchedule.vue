@@ -1,18 +1,20 @@
 <template>
   <view class="main">
+    <Schedule/>
     <TabBar/>
-    <text>竞赛日程页面</text>
   </view>
 </template>
 
 <script>
 import TabBar from '../../components/TabBar'
-
+import Schedule from '../../components/Schedule'
 export default {
   name: 'CompetitionSchedule',
   components: {
-    TabBar
-  }
+    TabBar,
+    Schedule
+  },
+
 }
 </script>
 
