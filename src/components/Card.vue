@@ -15,7 +15,7 @@
     <view class='at-col at-col-12'>标题</view>
   </view>
   <view class='at-row introduction-size'>
-    <view class="at-col at-col-9">
+    <view class="at-col at-col-9 at-col--wrap">
       <text class="intro">
         文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介
         文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介

@@ -6,7 +6,9 @@ export default {
     'pages/myContest/myContest'
   ],
   tabBar: {
-    custom: true,
+    selectedColor: '#7788dd',
+    borderStyle: 'black',
+    custom: false,
     list: [
       {
         pagePath: 'pages/index/index',
