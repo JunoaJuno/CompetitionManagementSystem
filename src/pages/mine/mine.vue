@@ -1,23 +1,22 @@
 <template>
   <view class="main">
+    <HeaderMine/>
     <TabBar/>
-    <text>
-      我的页面
-    </text>
   </view>
 </template>
 
 <script>
 import TabBar from '../../components/TabBar'
-
+import HeaderMine from '../../components/HeaderMine'
 export default {
   name: 'Mine',
   components: {
-    TabBar
+    TabBar,
+    HeaderMine
   }
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>
