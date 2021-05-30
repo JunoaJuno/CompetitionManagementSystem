@@ -2,6 +2,7 @@
   <view class="main index">
 <!--    <NumberDisplay/>-->
 <!--    <NumberSubmit/>-->
+    <Search></Search>
     <swiper
       class='swiper'
       indicatorColor='#999'
@@ -31,6 +32,7 @@ import NumberSubmit from '../../components/NumberSubmit.vue'
 import TabBar from '../../components/TabBar'
 import Card from '../../components/Card'
 import { AtList, AtListItem } from 'taro-ui-vue'
+import Search from '../../components/Search'
 
 export default {
   name: 'Index',
@@ -50,6 +52,7 @@ export default {
     }
   },
   components: {
+    Search,
     // NumberDisplay,
     // NumberSubmit,
     TabBar,

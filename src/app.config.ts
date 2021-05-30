@@ -8,7 +8,7 @@ export default {
   tabBar: {
     selectedColor: '#7788dd',
     borderStyle: 'black',
-    custom: false,
+    custom: true,
     list: [
       {
         pagePath: 'pages/index/index',
@@ -24,7 +24,7 @@ export default {
       },
       {
         pagePath: 'pages/mine/mine',
-        text: '我的'
+        text: '个人'
       }
     ]
   },

@@ -31,7 +31,7 @@ export default {
           iconType: 'home', text: 'new' },
         { title: '竞赛日程', iconType: 'calendar', text: '5', max: 10 },
         { title: '我的竞赛', iconType: 'list', text: '3', max: 10 },
-        { title: '我的', iconType: 'user' }
+        { title: '个人', iconType: 'user' }
       ],
     }
   },

@@ -1,7 +1,7 @@
 <template>
   <view class='example-item'>
     <AtAccordion
-      title='2021-05-17'
+      title='2021-05'
       :open="value3"
       :icon="{ value: 'tags', color: '#77a1fd' }"
       :onClick="onClick"
