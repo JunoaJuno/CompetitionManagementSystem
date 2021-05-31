@@ -1,5 +1,5 @@
 <template>
-  <AtDivider lineColor='#204, 204, 204' />
+  <AtDivider/>
 </template>
 
 <script>

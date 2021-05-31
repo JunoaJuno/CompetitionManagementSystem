@@ -3,7 +3,11 @@ export default {
     'pages/index/index',
     'pages/competitionSchedule/competitionSchedule',
     'pages/mine/mine',
-    'pages/myContest/myContest'
+    'pages/myContest/myContest',
+    'pages/index/news/news',
+    'pages/competitionSchedule/competitionInfo/competitionInfo',
+    'pages/myContest/signUpContest/signUpContest',
+    'pages/myContest/signUpRecord/signUpRecord',
   ],
   tabBar: {
     selectedColor: '#7788dd',

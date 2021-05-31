@@ -1,5 +1,5 @@
 <template>
-  <view class="border">
+  <view class="border"  @tap="click">
   <view class='at-row'>
     <view class='at-col at-col-1'>
       <AtAvatar class='atAvatar' size='small' circle='true' image='https://www.gkirito.com/images/me/avatar.png'></AtAvatar>
@@ -30,14 +30,18 @@
 
 <script>
 import { AtAvatar } from 'taro-ui-vue'
+import Taro from '@tarojs/taro'
 export default {
   name: 'Card',
   components: {
     AtAvatar
   },
-  methods: {
+  methods:{
     click(){
-      console.log('clicked!!!')
+      Taro.navigateTo({
+        url: '/pages/index/news/news',
+
+      })
     }
   }
 }

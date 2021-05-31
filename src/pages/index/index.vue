@@ -33,6 +33,7 @@ import TabBar from '../../components/TabBar'
 import Card from '../../components/Card'
 import { AtList, AtListItem } from 'taro-ui-vue'
 import Search from '../../components/Search'
+import Taro from '@tarojs/taro'
 
 export default {
   name: 'Index',
@@ -57,7 +58,8 @@ export default {
     // NumberSubmit,
     TabBar,
     Card
-  }
+  },
+
 }
 </script>
 
