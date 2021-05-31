@@ -1,46 +1,56 @@
 <template>
   <view class="border"  @tap="click">
-  <view class='at-row'>
-    <view class='at-col at-col-1'>
-      <AtAvatar class='atAvatar' size='small' circle='true' image='https://www.gkirito.com/images/me/avatar.png'></AtAvatar>
+    <view class='at-row'>
+      <view class='at-col at-col-1'>
+        <AtAvatar class='atAvatar' size='small' circle='true' image='https://www.gkirito.com/images/me/avatar.png'></AtAvatar>
+      </view>
+      <view class='at-col at-col-2'>
+        <text>
+          {{articleInfo.author}}
+        </text>
+      </view>
+      <view class="at-col at-col-9"></view>
     </view>
-    <view class='at-col at-col-2'>
-      <text>
-        xxx协会
-      </text>
+    <view class='at-row'>
+      <view class='at-col at-col-12'>{{articleInfo.title}}</view>
     </view>
-    <view class="at-col at-col-9"></view>
-  </view>
-  <view class='at-row'>
-    <view class='at-col at-col-12'>标题</view>
-  </view>
-  <view class='at-row introduction-size'>
-    <view class="at-col at-col-9 at-col--wrap">
-      <text class="intro">
-        文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介
-        文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介文章简介
-      </text>
+    <view class='at-row introduction-size'>
+      <view class="at-col at-col-9 at-col--wrap">
+        <text class="intro">
+          {{articleInfo.digest}}
+        </text>
+      </view>
+      <view class='at-col at-col-3'>
+        <image class="introduction-img" :src='articleInfo.thumbUrl' alt=""></image>
+      </view>
     </view>
-    <view class='at-col at-col-3'>
-      <img class="introduction-img" src='https://libget.com/gkirito/blog/image/2021/image-202103052Amoqrhl%402x.png' alt="">
-    </view>
-  </view>
   </view>
 </template>
 
 <script>
 import { AtAvatar } from 'taro-ui-vue'
 import Taro from '@tarojs/taro'
+import {encode}from 'utilscore/libs/base64'
 export default {
   name: 'Card',
   components: {
     AtAvatar
   },
+  props: {
+    article: {
+      type: Object,
+      required: true,
+    }
+  },
+  data(){
+    return {
+      articleInfo: this.article
+    }
+  },
   methods:{
     click(){
       Taro.navigateTo({
-        url: '/pages/index/news/news',
-
+        url: '/pages/index/news/news?url='+ encode(this.articleInfo.url),
       })
     }
   }
