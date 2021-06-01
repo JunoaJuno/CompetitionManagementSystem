@@ -22,6 +22,7 @@ import {computed} from 'vue'
 import Taro from '@tarojs/taro'
 import config from '../../config'
 import { AtToast } from 'taro-ui-vue'
+
 export default {
   name: 'Mine',
   setup() {
@@ -49,7 +50,7 @@ export default {
   methods: {
   },
   components: {
-    ChangeRole,
+    // ChangeRole,
     ListItem,
     DividerLine,
     TabBar,

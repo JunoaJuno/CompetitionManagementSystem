@@ -1,6 +1,6 @@
 <template>
   <view class='at-article'>
-    <view class='at-article__h1'>{{ competitonName }}</view>
+    <view class='at-article__h1'>{{ competitionName }}</view>
     <view class='at-article__info'>{{time}}</view>
   </view>
   <view class='at-article__content'>
@@ -80,12 +80,12 @@ export default {
   components: {SignUpButton},
   data(){
     return{
-      competitonName:'浙江省第四届网络信息安全竞赛',
+      competitionName:'第十一届全国服务外包大赛院赛',
       time:'2017-05-07',
       signUpTime:'2017-05-08 12:00',
       signUpEndTime:'2017-05-18 12:00',
       workEndTime:'2017-05-18 12:00',
-      competitionLocation:'杭州电子科技大学信息工程学院笃行楼303杭州电子科技大学信息工程学院笃行楼303',
+      competitionLocation:'杭州电子科技大学信息工程学院B303',
       sponsor:'杭州电子科技大学信息工程学院',
       undertaker:'杭州电子科技大学信息工程学院',
       competitionState:'报名阶段',
