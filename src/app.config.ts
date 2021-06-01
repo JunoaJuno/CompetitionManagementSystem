@@ -18,7 +18,6 @@ export default {
     'pages/mine/control/contestControl/awardInfo/awardInfo',
     'pages/mine/control/contestControl/contestInfo/contestInfo',
     'pages/mine/control/contestControl/contestMasterInfo/contestMasterInfo',
-    'pages/mine/control/contestControl/newsInfo/newsInfo',
     'pages/mine/control/contestControl/signUpInfo/signUpInfo',
     'pages/mine/control/authorityControl/authorityInfo/authorityInfo',
     'pages/mine/control/authorityControl/roleInfo/roleInfo',
@@ -27,7 +26,6 @@ export default {
     'pages/mine/control/contestControl/awardInfo/awardEdit/awardEdit',
     'pages/mine/control/contestControl/contestInfo/contestEdit/contestEdit',
     'pages/mine/control/contestControl/contestMasterInfo/contestMasterEdit/contestMasterEdit',
-    'pages/mine/control/contestControl/newsInfo/newsEdit/newsEdit',
     'pages/mine/control/contestControl/signUpInfo/signUpEdit/signUpEdit',
     'pages/mine/control/authorityControl/authorityInfo/authorityEdit/authorityEdit',
     'pages/mine/control/authorityControl/roleInfo/roleEdit/roleEdit'

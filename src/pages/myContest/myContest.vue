@@ -7,7 +7,6 @@
         </view>
     </view>
     <SignUpCard @click='viewDetails'></SignUpCard>
-    <SignUpCard @click='viewDetails'></SignUpCard>
     <TabBar/>
   </view>
 </template>

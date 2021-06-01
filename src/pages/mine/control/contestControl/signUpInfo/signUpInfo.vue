@@ -1,5 +1,6 @@
 <template>
   <search></search>
+  <AddButton @click="AddInfo"></AddButton>
   <AtCard
     note='作品名称'
     extra=''
@@ -15,14 +16,21 @@
 import { AtCard } from 'taro-ui-vue'
 import Taro from '@tarojs/taro'
 import Search from '../../../../../components/Search'
+import AddButton from '../../../../../components/AddButton'
 export default {
   name: 'signUpInfo',
   components:{
+    AddButton,
     Search,
     AtCard
   },
   methods:{
     onEdit(){
+      Taro.navigateTo({
+        url:'/pages/mine/control/contestControl/signUpInfo/signUpEdit/signUpEdit'
+      })
+    },
+    AddInfo(){
       Taro.navigateTo({
         url:'/pages/mine/control/contestControl/signUpInfo/signUpEdit/signUpEdit'
       })

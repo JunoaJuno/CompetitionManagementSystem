@@ -5,44 +5,44 @@
         required
         :editable="editable"
         class="input-info"
-        name='value'
-        title='竞赛'
+        name='value1'
+        title='竞赛名称'
         type='text'
         placeholder=''
-        :value="value"
+        :value="value1"
         :onChange="handleChange"
       />
       <AtInput
         required
         :editable="editable"
         class="input-info"
-        name='value'
+        name='value2'
         title='队伍名称'
         type='text'
         placeholder=''
-        :value="value"
+        :value="value2"
         :onChange="handleChange"
       />
       <AtInput
         required
         :editable="editable"
         class="input-info"
-        name='value'
+        name='value3'
         title='队长姓名'
         type='text'
         placeholder=''
-        :value="value"
+        :value="value3"
         :onChange="handleChange"
       />
       <AtInput
         required
         :editable="editable"
         class="input-info"
-        name='value'
+        name='value4'
         title='队长学号'
         type='text'
         placeholder=''
-        :value="value"
+        :value="value4"
         :onChange="handleChange"
       />
 
@@ -50,11 +50,11 @@
         required
         :editable="editable"
         class="input-info"
-        name='value'
+        name='value5'
         title='手机号'
         type='text'
         placeholder=''
-        :value="value"
+        :value="value5"
         :onChange="handleChange"
       />
 
@@ -62,11 +62,11 @@
         required
         :editable="editable"
         class="input-info"
-        name='value'
+        name='value6'
         title='指导老师'
         type='text'
         placeholder=''
-        :value="value"
+        :value="value6"
         :onChange="handleChange"
       />
       <view id="team-member" v-if="isPersonal===0">
@@ -75,11 +75,11 @@
           required
           :editable="editable"
           class='input-info'
-          name='value'
+          name='value7'
           title='队员姓名'
           type='text'
           placeholder=''
-          :value="value"
+          :value="value7"
           :onChange="handleChange"
           v-for="(item,i) of items" v-model="items[i]" :key="i"
         />
@@ -88,11 +88,11 @@
       <AtInput
         :editable="editable"
         class="input-info"
-        name='value'
+        name='value8'
         title='作品名称'
         type='text'
         placeholder=''
-        :value="value"
+        :value="value8"
         :onChange="handleChange"
       />
       <AtButton class="submit-but" formType='submit' :onClick="onSubmit">提交</AtButton>
@@ -118,6 +118,14 @@ export default {
       isPersonal:0,
       items:[],
       editable:false,
+      value1:'浙江省第三届信息安全竞赛',
+      value2:'拿拿爱吃鱼',
+      value3:'张小明',
+      value4:'17905661',
+      value5:'13055616651',
+      value6:'张萍萍',
+      value7:'韩一',
+      value8:'无'
     }
 
   },

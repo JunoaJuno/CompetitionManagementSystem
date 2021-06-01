@@ -2,7 +2,7 @@
   <AtCard
     note=''
     extra=''
-    title='第三届浙江省信息安全竞赛'
+    title='浙江省第三届信息安全竞赛'
     thumb=''
     class='card-space'
   >

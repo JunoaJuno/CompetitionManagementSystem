@@ -2,20 +2,20 @@
   <view class='example-item'>
     <AtAccordion
       title='2021-05'
-      :open="value3"
+      :open="value1"
       :icon="{ value: 'tags', color: '#77a1fd' }"
-      :onClick="onClick"
+      :onClick="onClick1"
     >
       <AtList :hasBorder="false">
         <AtListItem
-          title='第十一届全国服务外包大赛'
-          note='第十一届全国服务外包大赛'
+          title='第十一届全国服务外包大赛院赛'
+          note=''
           thumb='https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png'
           @click="click"
         />
         <AtListItem
-          title='标题文字'
-          note='描述信息'
+          title='浙江省第三届信息安全竞赛'
+          note=''
           thumb='http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png'
           @click="click"
         />
@@ -23,16 +23,16 @@
     </AtAccordion>
     <AtAccordion
       title='2021-06'
-      :open="value3"
+      :open="value2"
       :icon="{ value: 'tags', color: '#77a1fd' }"
-      :onClick="onClick"
+      :onClick="onClick2"
     >
     </AtAccordion>
     <AtAccordion
       title='2021-07'
       :open="value3"
       :icon="{ value: 'tags', color: '#77a1fd' }"
-      :onClick="onClick"
+      :onClick="onClick3"
     >
     </AtAccordion>
   </view>
@@ -50,7 +50,10 @@ export default {
   },
   data() {
     return {
-      value3: false
+      value1:false,
+      value2:false,
+      value3: false,
+
     }
   },
   methods: {
@@ -59,7 +62,13 @@ export default {
         url:'/pages/competitionSchedule/competitionInfo/competitionInfo'
       })
     },
-    onClick(val){
+    onClick1(val){
+      this.value1 = val
+    },
+    onClick2(val){
+      this.value2 = val
+    },
+    onClick3(val){
       this.value3 = val
     }
   },

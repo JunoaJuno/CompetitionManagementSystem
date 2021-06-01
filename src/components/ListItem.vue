@@ -67,10 +67,6 @@
           title='成绩管理'
           @click="AwardClick"
         />
-        <AtListItem
-          title='要闻管理'
-          @click="NewsClick"
-        />
       </AtList>
     </AtAccordion>
     <AtAccordion
@@ -180,11 +176,6 @@ export default {
         url:'/pages/mine/control/contestControl/awardInfo/awardInfo'
       })
     },
-    NewsClick(){
-      Taro.navigateTo({
-        url:'/pages/mine/control/contestControl/newsInfo/newsInfo'
-      })
-    },
     RoleClick(){
       Taro.navigateTo({
         url:'/pages/mine/control/authorityControl/roleInfo/roleInfo'
@@ -215,7 +206,7 @@ export default {
 }
 .position{
   position: fixed;
-  top: 1000px;
+  top: 800px;
   right: 50px;
 }
 

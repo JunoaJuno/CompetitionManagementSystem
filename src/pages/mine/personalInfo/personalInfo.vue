@@ -9,31 +9,31 @@
     />
     <AtListItem
       title='学号'
-      extraText='详细信息'
+      extraText='179*****'
       arrow='right'
       :iconInfo="{ size: 25, color: '#78A4FA', value: 'star', }"
     />
     <AtListItem
       title='班级号'
-      extraText='详细信息'
+      extraText='1709****'
       arrow='right'
       :iconInfo="{ size: 25, color: '#78A4FA', value: 'tag', }"
     />
     <AtListItem
       title='院系'
-      extraText='详细信息'
+      extraText='计算机系'
       arrow='right'
       :iconInfo="{ size: 25, color: '#78A4FA', value: 'tag', }"
     />
     <AtListItem
       title='专业'
-      extraText='详细信息'
+      extraText='计算机科学与技术'
       arrow='right'
       :iconInfo="{ size: 25, color: '#78A4FA', value: 'tag', }"
     />
     <AtListItem
       title='手机号'
-      extraText='13073635561'
+      extraText='1307****561'
       arrow='right'
       :iconInfo="{ size: 25, color: '#78A4FA', value: 'phone', }"
       @click="onPhone"
