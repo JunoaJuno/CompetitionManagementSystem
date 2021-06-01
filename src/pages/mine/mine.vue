@@ -1,9 +1,5 @@
 <template>
   <view class="main">
-    <view class="change-role">
-      <ChangeRole></ChangeRole>
-    </view>
-
     <HeaderMine/>
     <DividerLine lineColor='#204, 204, 204'></DividerLine>
     <ListItem></ListItem>
@@ -16,11 +12,10 @@ import TabBar from '../../components/TabBar'
 import HeaderMine from '../../components/HeaderMine'
 import DividerLine from '../../components/DividerLine'
 import ListItem from '../../components/ListItem'
-import ChangeRole from '../../components/ChangeRole'
 export default {
   name: 'Mine',
   components: {
-    ChangeRole,
+    // ChangeRole,
     ListItem,
     DividerLine,
     TabBar,

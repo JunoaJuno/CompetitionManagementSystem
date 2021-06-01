@@ -21,6 +21,20 @@
         />
       </AtList>
     </AtAccordion>
+    <AtAccordion
+      title='2021-06'
+      :open="value3"
+      :icon="{ value: 'tags', color: '#77a1fd' }"
+      :onClick="onClick"
+    >
+    </AtAccordion>
+    <AtAccordion
+      title='2021-07'
+      :open="value3"
+      :icon="{ value: 'tags', color: '#77a1fd' }"
+      :onClick="onClick"
+    >
+    </AtAccordion>
   </view>
 </template>
 
@@ -36,7 +50,7 @@ export default {
   },
   data() {
     return {
-      value3: true
+      value3: false
     }
   },
   methods: {
@@ -44,6 +58,9 @@ export default {
       Taro.navigateTo({
         url:'/pages/competitionSchedule/competitionInfo/competitionInfo'
       })
+    },
+    onClick(val){
+      this.value3 = val
     }
   },
 }

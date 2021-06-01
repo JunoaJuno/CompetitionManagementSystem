@@ -2,6 +2,8 @@
   <view>
     <AtForm id="form">
       <AtInput
+        required
+        :editable="editable"
         class="input-info"
         name='value'
         title='竞赛'
@@ -11,6 +13,8 @@
         :onChange="handleChange"
       />
       <AtInput
+        required
+        :editable="editable"
         class="input-info"
         name='value'
         title='队伍名称'
@@ -20,6 +24,8 @@
         :onChange="handleChange"
       />
       <AtInput
+        required
+        :editable="editable"
         class="input-info"
         name='value'
         title='队长姓名'
@@ -29,6 +35,8 @@
         :onChange="handleChange"
       />
       <AtInput
+        required
+        :editable="editable"
         class="input-info"
         name='value'
         title='队长学号'
@@ -39,9 +47,11 @@
       />
 
       <AtInput
+        required
+        :editable="editable"
         class="input-info"
         name='value'
-        title='队长手机号'
+        title='手机号'
         type='text'
         placeholder=''
         :value="value"
@@ -49,6 +59,8 @@
       />
 
       <AtInput
+        required
+        :editable="editable"
         class="input-info"
         name='value'
         title='指导老师'
@@ -60,6 +72,8 @@
       <view id="team-member" v-if="isPersonal===0">
         <AtIcon value='add-circle' size='20' color='blue' @click="addMember"></AtIcon>
         <AtInput
+          required
+          :editable="editable"
           class='input-info'
           name='value'
           title='队员姓名'
@@ -72,6 +86,7 @@
       </view>
 
       <AtInput
+        :editable="editable"
         class="input-info"
         name='value'
         title='作品名称'
@@ -81,6 +96,7 @@
         :onChange="handleChange"
       />
       <AtButton class="submit-but" formType='submit' :onClick="onSubmit">提交</AtButton>
+      <AtButton class="submit-but" :onClick="onEdit">编辑</AtButton>
 <!--      <AtButton formType='reset' :onClick="onReset">重置</AtButton>-->
     </AtForm>
   </view>
@@ -100,7 +116,8 @@ export default {
   data(){
     return{
       isPersonal:0,
-      items:[]
+      items:[],
+      editable:false,
     }
 
   },
@@ -116,6 +133,9 @@ export default {
     },
     addMember(){
       this.items.push('')
+    },
+    onEdit(){
+      this.editable=true
     }
   }
 }
@@ -132,10 +152,10 @@ export default {
   font-size: 30px;
 }
 .input-info{
-  width: 85%;
-  float: left;
-  margin-left: 15px;
-  padding-left: 15px;
+  //width: 85%;
+  //float: left;
+  //margin-left: 15px;
+  //padding-left: 15px;
 
 }
 #form{
