@@ -1,7 +1,5 @@
 <template>
   <view class="main index">
-<!--    <NumberDisplay/>-->
-<!--    <NumberSubmit/>-->
     <Search></Search>
     <swiper
       class='swiper'
@@ -17,18 +15,14 @@
         <image :src="item" class="slide-image" />
       </swiper-item>
     </swiper>
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
-    <Card/>
+    <view v-for="article in articles">
+      <Card v-bind:article="article"/>
+    </view>
     <TabBar/>
   </view>
 </template>
 
 <script>
-import NumberDisplay from '../../components/NumberDisplay.vue'
-import NumberSubmit from '../../components/NumberSubmit.vue'
 import TabBar from '../../components/TabBar'
 import Card from '../../components/Card'
 import { AtList, AtListItem } from 'taro-ui-vue'
@@ -37,8 +31,18 @@ import Taro from '@tarojs/taro'
 
 export default {
   name: 'Index',
+  async onShow(options) {
+    const res = await Taro.request({
+      url: 'http://localhost:8088/api/v1/department/list?current=0&size=6',
+      method: 'GET',
+    })
+    if (res.statusCode === 200 && res.data.message === 'ok') {
+      this.articles = res.data.data
+    }
+  },
   data() {
     return {
+      articles: [],
       current: 1,
       duration: 500,
       interval: 1000,
@@ -54,8 +58,6 @@ export default {
   },
   components: {
     Search,
-    // NumberDisplay,
-    // NumberSubmit,
     TabBar,
     Card
   },

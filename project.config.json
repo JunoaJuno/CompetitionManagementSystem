@@ -4,7 +4,7 @@
   "description": "高校竞赛管理系统",
   "appid": "wxd925b7187fb0a88b",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
     "enhance": true,
     "postcss": false,

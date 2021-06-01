@@ -1,12 +1,20 @@
 <template>
-  <Article></Article>
+  <web-view :src="url"></web-view>
 </template>
 
 <script>
-import Article from '../../../components/Article'
+import Taro from '@tarojs/taro'
+import {decode} from 'utilscore/libs/base64'
 export default {
   name: 'news',
-  components: {Article}
+  onShow() {
+    this.url = decode(Taro.getCurrentInstance().router.params.url)
+  },
+  data() {
+    return{
+      url: ''
+    }
+  }
 }
 </script>
 
