@@ -8,6 +8,7 @@ export default {
     'pages/competitionSchedule/competitionInfo/competitionInfo',
     'pages/myContest/signUpContest/signUpContest',
     'pages/myContest/signUpRecord/signUpRecord',
+    'pages/mine/login/login',
     'pages/mine/personalInfo/personalInfo',
     'pages/mine/competitionRecord/competitionRecord',
     'pages/mine/personalAward/personalAward',
