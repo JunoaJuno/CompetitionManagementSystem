@@ -8,6 +8,7 @@ export default {
     'pages/competitionSchedule/competitionInfo/competitionInfo',
     'pages/myContest/signUpContest/signUpContest',
     'pages/myContest/signUpRecord/signUpRecord',
+    'pages/mine/login/login'
   ],
   tabBar: {
     selectedColor: '#7788dd',
