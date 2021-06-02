@@ -51,7 +51,7 @@ export default {
       if (response.statusCode === 200 && response.data.message === 'ok') {
         await this.$store.dispatch('changeAuthToken', response.header.Authorization)
         await Taro.reLaunch({
-          url: '/pages/mine/mine'
+          url: '/pages/index/index'
         })
       }
     }
