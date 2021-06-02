@@ -1,7 +1,7 @@
 <template>
   <view class='at-article'>
-    <view class='at-article__h1'>{{ competitionName }}</view>
-    <view class='at-article__info'>{{time}}</view>
+    <view class='at-article__h1'>{{ info.name }}</view>
+    <view class='at-article__info'>{{info.updateTime}}</view>
   </view>
   <view class='at-article__content'>
     <view class="competition-info">
@@ -9,7 +9,7 @@
         一、报名开始时间：
       </view>
       <view class='at-article__h3'>
-        {{signUpTime}}
+        {{info.signupStart}}
       </view>
     </view>
     <view class="competition-info">
@@ -17,7 +17,7 @@
         二、报名截止时间：
       </view>
       <view class='at-article__h3'>
-        {{signUpEndTime}}
+        {{info.signupEnd}}
       </view>
     </view>
     <view class="competition-info">
@@ -25,7 +25,7 @@
         三、作品提交截止时间：
       </view>
       <view class='at-article__h3'>
-        {{workEndTime}}
+        {{info.worksEnd}}
       </view>
     </view>
     <view class="competition-info">
@@ -33,7 +33,7 @@
         四、地点：
       </view>
       <view class='at-article__h3'>
-        {{competitionLocation}}
+        {{info.location}}
       </view>
     </view>
     <view class="competition-info">
@@ -41,7 +41,7 @@
         五、主办方：
       </view>
       <view class='at-article__h3'>
-        {{sponsor}}
+        {{info.sponsor}}
       </view>
     </view>
     <view class="competition-info">
@@ -49,7 +49,7 @@
         六、承办方：
       </view>
       <view class='at-article__h3'>
-        {{undertaker}}
+        {{info.undertaker}}
       </view>
     </view>
     <view class="competition-info">
@@ -57,7 +57,7 @@
         七、竞赛状态：
       </view>
       <view class='at-article__h3'>
-        {{competitionState}}
+        {{info.state}}
       </view>
     </view>
     <view class="competition-info">
@@ -65,31 +65,52 @@
         八、备注：
       </view>
       <view class='at-article__h3'>
-        {{notes}}
+        {{info.description}}
       </view>
     </view>
   </view>
-  <SignUpButton></SignUpButton>
+  <AtButton type='secondary' size='small' @click="click">报名</AtButton>
+<!--  <SignUpButton/>-->
 </template>
 
 <script>
 import { AtButton } from 'taro-ui-vue'
 import SignUpButton from '../../../components/SignUpButton'
+import Taro from '@tarojs/taro'
+import config from '../../../config'
 export default {
   name: 'competitionInfo',
-  components: {SignUpButton},
+  components: {AtButton},
+  async onShow() {
+    const id = Taro.getCurrentInstance().router.params.id
+    const response = await Taro.request({
+      url: config.backendUrl+ '/api/v1/manage/competition/slave/getBySlave/'+ id,
+      method: 'GET'
+    })
+    if (response.statusCode === 200 && response.data.message==='ok') {
+      this.info = response.data.data
+    }
+  },
+  methods:{
+    click(){
+      Taro.navigateTo({
+        url:'/pages/myContest/signUpContest/signUpContest?id='+this.info.id
+      })
+    }
+  },
   data(){
     return{
-      competitionName:'第十一届全国服务外包大赛院赛',
-      time:'2017-05-07',
-      signUpTime:'2017-05-08 12:00',
-      signUpEndTime:'2017-05-18 12:00',
-      workEndTime:'2017-05-18 12:00',
-      competitionLocation:'杭州电子科技大学信息工程学院B303',
-      sponsor:'杭州电子科技大学信息工程学院',
-      undertaker:'杭州电子科技大学信息工程学院',
-      competitionState:'报名阶段',
-      notes:'不允许相互交流'
+      info: {},
+      // competitionName:'第十一届全国服务外包大赛院赛',
+      // time:'2017-05-07',
+      // signUpTime:'2017-05-08 12:00',
+      // signUpEndTime:'2017-05-18 12:00',
+      // workEndTime:'2017-05-18 12:00',
+      // competitionLocation:'杭州电子科技大学信息工程学院B303',
+      // sponsor:'杭州电子科技大学信息工程学院',
+      // undertaker:'杭州电子科技大学信息工程学院',
+      // competitionState:'报名阶段',
+      // notes:'不允许相互交流'
     }
   }
 }

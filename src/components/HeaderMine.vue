@@ -31,19 +31,17 @@ export default {
     }
   },
   onShow() {
-    // const userInfo = computed(() => this.$store.getters.getUserInfo)
-    // const authToken = computed(() => this.$store.getters.getAuthToken)
-    // if (userInfo.value && authToken) {
-    //   this.isLogin = true
-    //   this.username = userInfo.value.nickName
-    //   this.userIcon = userInfo.value.avatarUrl
-    // }
+    const userInfo = computed(() => this.$store.getters.getUserInfo)
+    const authToken = computed(() => this.$store.getters.getAuthToken)
+    this.isLogin = true
+    this.username = userInfo.value.nickName
+    this.userIcon = userInfo.value.avatarUrl
   },
   data() {
     return {
-      isLogin: this.isLogin1,
-      username: this.username1,
-      userIcon: this.userIcon1,
+      isLogin: false,
+      username: '',
+      userIcon: '',
       isOpened: false,
       text: '',
       icon: '',
